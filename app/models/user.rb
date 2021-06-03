@@ -5,5 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   # Add association to the links table; user has many links 
   has_many :links
-  acts_as_voter
+  
 end

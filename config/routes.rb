@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :links do
     member do
       put 'like' => 'links#like'
+      put 'dislike' => 'links#dislike'
     end
   end
 end
