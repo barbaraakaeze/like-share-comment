@@ -9,5 +9,6 @@ Rails.application.routes.draw do
       put 'like' => 'links#like'
       put 'dislike' => 'links#dislike'
     end
+    resources :comments
   end
 end

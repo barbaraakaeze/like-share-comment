@@ -10,6 +10,15 @@
     <%= @link.url %>
 </p>
 
+<h2> Comments </h2>
+<%= @link.comments.each do |comment|%>
+<%= comment.user.email%>
+<small>Commented</small>
+<%= comment.body%>
+<% end %>
+
+<%= render 'comments/form' %>
+
 <% if @link.user == current_user%>
 <%= link_to 'Edit', edit_link_path(@link) %>
 <%= link_to 'Delete', @link, method: :delete, data: { confirm: 'Are you sure?' } %>
